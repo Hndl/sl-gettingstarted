@@ -8,8 +8,8 @@ st.title("Test App No.3" )
 
 # Create connection object and retrieve file contents.
 # Specify input format is a csv and to cache the result for 600 seconds.
-conn = st.connection(st.secrets.sourcedata.fs, type=FilesConnection)
-df = conn.read(st.secrets.sourcedata.data_uri, input_format=st.secrets.sourcedata.format, ttl=st.secrets.sourcedata.ttl)
+conn = st.connection('s3', type=FilesConnection)
+df = conn.read("vw-ram-site-a/master-data/master.csv", "csv", ttl=600)
 
 
 
