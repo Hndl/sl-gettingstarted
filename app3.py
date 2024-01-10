@@ -5,7 +5,13 @@ from st_files_connection import FilesConnection
 from streamlit.components.v1 import html
 import time
 
-st.set_page_config()
+
+
+st.set_page_config(
+    page_title="Real-Time VW POC Dashboard,
+    page_icon="✅",
+    layout="wide",
+)
 
 my_html = """
 <script>
@@ -15,7 +21,7 @@ window.onload = function () {
 </script>
 """
 
-html(my_html)
+
 
 st.title("Test App No.3 : 1 min" )
 
@@ -32,3 +38,9 @@ df = conn.read(st.secrets.sourcedata.data_uri, input_format=st.secrets.sourcedat
 
 for row in df.itertuples():
     st.write(f"{row.Owner} has a :{row.Pet}:")
+
+
+
+
+
+html(my_html)
