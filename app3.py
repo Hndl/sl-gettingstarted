@@ -15,5 +15,6 @@ df = conn.read("vw-ram-site-a/master-data/master.csv", input_format="csv", ttl=6
 
 # Print results.
 #Timestamp_UTC,ControlareaRedSen,MeasureareaBlueSen,Voltage,MeasurearePH_1_S/N:A,ControlareaPH_2_SN
+
 for row in df.itertuples():
-    st.write(f"{row.Timestamp_UTC} has a :{row.ControlareaRedSen}:")
+    st.write(f"{row.Owner} has a :{row.Pet}:")
