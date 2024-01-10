@@ -12,11 +12,11 @@ st.set_page_config(
     page_icon="✅",
     layout="wide",
 )
-
+#parent.window.location.reload()
 my_html = """
 <script>
 window.onload = function () {
-   setInterval(function () {parent.window.location.reload();}, 60000);
+   setInterval(function () {location.reload();}, 60000);
 };
 </script>
 """
