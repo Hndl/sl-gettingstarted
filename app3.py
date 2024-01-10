@@ -10,7 +10,7 @@ st.set_page_config()
 my_html = """
 <script>
 window.onload = function () {
-   setInterval(function () {location.reload();}, 300000);
+   setInterval(function () {location.reload();}, 60000);
 };
 </script>
 """
