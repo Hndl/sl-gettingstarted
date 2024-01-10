@@ -14,5 +14,6 @@ df = conn.read("vw-ram-site-a/master-data/master.csv", input_format="csv", ttl=6
 
 
 # Print results.
-#for row in df.itertuples():
-#    st.write(f"{row.Controlarea-RedSen} has a :{row.Measurearea-BlueSen}:")
+#Timestamp_UTC,ControlareaRedSen,MeasureareaBlueSen,Voltage,MeasurearePH_1_S/N:A,ControlareaPH_2_SN
+for row in df.itertuples():
+    st.write(f"{row.Timestamp_UTC} has a :{row.ControlareaRedSen}:")
