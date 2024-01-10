@@ -40,13 +40,13 @@ window.onload = function () {
 
 html(my_html)
 
-st.title("Test App No.3" )
+st.title("Test App No.3 using secrets more" )
 
 
 # Create connection object and retrieve file contents.
 # Specify input format is a csv and to cache the result for 600 seconds.
-conn = st.connection('s3', type=FilesConnection)
-df = conn.read("vw-ram-site-a/master-data/master.csv", input_format="csv", ttl=600)
+conn = st.connection(st.secrects.sourcedata.fs, type=FilesConnection)
+df = conn.read(st.secrects.sourcedata.data_uri, input_format=st.secrects.sourcedata.format, ttl=st.secrects.sourcedata.ttl)
 
 
 
