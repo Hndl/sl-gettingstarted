@@ -17,7 +17,7 @@ window.onload = function () {
 
 html(my_html)
 
-st.title("Test App No.3 using secrets more" )
+st.title("Test App No.3 : 1 min" )
 
 
 # Create connection object and retrieve file contents.
