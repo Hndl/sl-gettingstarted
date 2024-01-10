@@ -1,5 +1,5 @@
 numpy
 pandas
-pandas_profiling
 streamlit
-streamlit-pandas-profiling
+s3fs 2023.12.2
+st-files-connection
