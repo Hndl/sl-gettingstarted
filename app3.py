@@ -45,8 +45,8 @@ st.title("Test App No.3 using secrets more" )
 
 # Create connection object and retrieve file contents.
 # Specify input format is a csv and to cache the result for 600 seconds.
-conn = st.connection(st.secrects.sourcedata.fs, type=FilesConnection)
-df = conn.read(st.secrects.sourcedata.data_uri, input_format=st.secrects.sourcedata.format, ttl=st.secrects.sourcedata.ttl)
+conn = st.connection(st.secrets.sourcedata.fs, type=FilesConnection)
+df = conn.read(st.secrets.sourcedata.data_uri, input_format=st.secrets.sourcedata.format, ttl=st.secrets.sourcedata.ttl)
 
 
 
