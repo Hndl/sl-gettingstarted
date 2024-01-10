@@ -16,7 +16,7 @@ st.set_page_config(
 my_html = """
 <script>
 window.onload = function () {
-   setInterval(function () {alert("reload");location.reload();}, 60000);
+   setInterval(function () {parent.window.location.reload();}, 60000);
 };
 </script>
 """
