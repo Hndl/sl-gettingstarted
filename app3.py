@@ -33,7 +33,7 @@ df = conn.read(st.secrets.sourcedata.data_uri, input_format=st.secrets.sourcedat
 fig_col1, fig_col2, fig_col3 = st.columns(3)
 with fig_col1:
     #st.markdown("### Redox") too much spage
-    fig = px.line(df, x="Timestamp_UTC", y=["Control area - Redox 1_Red Sensor","Measure area - Redox 2_Blue Sensor"], line_dash="Control area - Redox 1_Red Sensor"", title='Redox Blue/Red',markers=True)
+    fig = px.line(df, x="Timestamp_UTC", y=["Control area - Redox 1_Red Sensor","Measure area - Redox 2_Blue Sensor"], line_dash="Control area - Redox 1_Red Sensor", title='Redox Blue/Red',markers=True)
     fig.update_traces(textposition="bottom right")
     st.write(fig)
             
