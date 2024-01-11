@@ -39,7 +39,7 @@ with fig_col1:
             
 with fig_col2:
     #st.markdown("### PH") too much space
-    fig2 = px.line(df, x="Timestamp_UTC", y=["Measure area - PH_1_S/N: 2213805","Control area - PH_2_S/N: 2213826_CONTROL"], title='PH Level',markers=True)
+    fig2 = px.line(df, x="Timestamp_UTC", y=["Measure area - PH_1_S/N: 2213805","Control area - PH_2_S/N: 2213826_CONTROL"],line_dash="Voltage", title='PH Level',markers=True)
     fig2.update_traces(textposition="bottom right")
     st.write(fig2)
 
