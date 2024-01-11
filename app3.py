@@ -36,12 +36,12 @@ df = conn.read(st.secrets.sourcedata.data_uri, input_format=st.secrets.sourcedat
 fig_col1, fig_col2 = st.columns(2)
 with fig_col1:
     st.markdown("### First Chart")
-    fig = px.line(df, x="Owner", y="Pet,MeasureareaBlueSen", title='Sensor Blue/Red')
+    fig = px.line(df, x="Owner", y="Pet", y="MeasureareaBlueSen", title='Sensor Blue/Red')
     st.write(fig)
             
 with fig_col2:
     st.markdown("### Second Chart")
-    fig2 = px.line(df, x="Owner", y="MeasurearePH_1_S/N:A,ControlareaPH_2_SN", title='PH 2')
+    fig2 = px.line(df, x="Owner", y="MeasurearePH_1_S/N:A",y="ControlareaPH_2_SN", title='PH 2')
     st.write(fig2)
 
 st.markdown("### Detailed Data View")
