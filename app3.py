@@ -40,7 +40,7 @@ for row in df.itertuples():
     st.write(f"{row.Owner} has a :{row.Pet}: :: {row.Voltage}")
 
 
-
+st.dataframe(df)
 
 
 html(my_html)
