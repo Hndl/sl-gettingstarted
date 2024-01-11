@@ -33,13 +33,13 @@ df = conn.read(st.secrets.sourcedata.data_uri, input_format=st.secrets.sourcedat
 fig_col1, fig_col2, fig_col3 = st.columns(3)
 with fig_col1:
     #st.markdown("### Redox") too much spage
-    fig = px.line(df, x="Timestamp_UTC", y=["Control area - Redox 1_Red Sensor","Measure area - Redox 2_Blue Sensor"], line_dash="Control area - Redox 1_Red Sensor", title='Redox Blue/Red',markers=True)
+    fig = px.line(df, x="Timestamp_UTC", y=["Control area - Redox 1_Red Sensor","Measure area - Redox 2_Blue Sensor"], title='Redox Blue/Red',markers=True)
     fig.update_traces(textposition="bottom right")
     st.write(fig)
             
 with fig_col2:
     #st.markdown("### PH") too much space
-    fig2 = px.line(df, x="Timestamp_UTC", y=["Measure area - PH_1_S/N: 2213805","Control area - PH_2_S/N: 2213826_CONTROL"],line_dash="Control area - PH_2_S/N: 2213826_CONTROL", title='PH Level',markers=True)
+    fig2 = px.line(df, x="Timestamp_UTC", y=["Measure area - PH_1_S/N: 2213805","Control area - PH_2_S/N: 2213826_CONTROL"], title='PH Level',markers=True)
     fig2.update_traces(textposition="bottom right")
     st.write(fig2)
 
