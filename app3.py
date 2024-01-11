@@ -4,6 +4,7 @@ import streamlit as st
 from st_files_connection import FilesConnection
 from streamlit.components.v1 import html
 import time
+import plotly.express as px
 
 
 
@@ -38,6 +39,9 @@ df = conn.read(st.secrets.sourcedata.data_uri, input_format=st.secrets.sourcedat
 
 for row in df.itertuples():
     st.write(f"{row.Owner} has a :{row.Pet}: :: {row.Voltage}")
+
+fig = px.line(df, x="Owner", y="Pet", title='Sample Line Chart')
+st.write(fig)
 
 
 st.dataframe(df)
