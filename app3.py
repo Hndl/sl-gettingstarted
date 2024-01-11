@@ -45,7 +45,7 @@ with fig_col2:
 
 with fig_col3:
     #st.markdown("### Voltage") too much spage
-    fig3 = px.line(df, x="Timestamp_UTC", y=["Voltage"], title='Voltage', markers=True, text="Voltage")
+    fig3 = px.line(df, x="Timestamp_UTC", y="Voltage", title='Voltage', markers=True, text="Voltage")
     fig3.update_traces(textposition="bottom right")
     st.write(fig3)
 
