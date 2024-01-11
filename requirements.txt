@@ -3,3 +3,4 @@ pandas
 streamlit
 s3fs 
 st-files-connection
+plotly.express
