@@ -41,7 +41,7 @@ with fig_col1:
             
 with fig_col2:
     st.markdown("### Second Chart")
-    fig = px.line(df, x="Owner", y="ControlareaPH_2_SN", title='PH 2')
+    fig2 = px.line(df, x="Owner", y="ControlareaPH_2_SN", title='PH 2')
     st.write(fig2)
 
 st.markdown("### Detailed Data View")
