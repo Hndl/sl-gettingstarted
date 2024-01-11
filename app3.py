@@ -37,7 +37,7 @@ df = conn.read(st.secrets.sourcedata.data_uri, input_format=st.secrets.sourcedat
 #Timestamp_UTC,ControlareaRedSen,MeasureareaBlueSen,Voltage,MeasurearePH_1_S/N:A,ControlareaPH_2_SN
 
 for row in df.itertuples():
-    st.write(f"{row.Owner} has a :{row.Pet}:")
+    st.write(f"{row.Owner} has a :{row.Pet}: :: {row.Voltage}")
 
 
 
