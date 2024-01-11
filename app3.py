@@ -34,17 +34,20 @@ fig_col1, fig_col2, fig_col3 = st.columns(3)
 with fig_col1:
     #st.markdown("### Redox") too much spage
     fig = px.line(df, x="Timestamp_UTC", y=["Control area - Redox 1_Red Sensor","Measure area - Redox 2_Blue Sensor"], title='Redox Blue/Red')
+    fig.update_traces(textposition="bottom right")
     st.write(fig)
             
 with fig_col2:
     #st.markdown("### PH") too much space
     fig2 = px.line(df, x="Timestamp_UTC", y=["Measure area - PH_1_S/N: 2213805","Control area - PH_2_S/N: 2213826_CONTROL"], title='PH Level')
+    fig2.update_traces(textposition="bottom right")
     st.write(fig2)
 
 with fig_col3:
     #st.markdown("### Voltage") too much spage
-    fig2 = px.line(df, x="Timestamp_UTC", y=["Voltage"], title='Voltage')
-    st.write(fig2)
+    fig3 = px.line(df, x="Timestamp_UTC", y=["Voltage"], title='Voltage')
+    fig3.update_traces(textposition="bottom right")
+    st.write(fig3)
 
 st.markdown("### Detailed Data View")
 st.dataframe(df)
