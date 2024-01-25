@@ -119,7 +119,8 @@ st.dataframe(dfT)
 
 
 plot_wind(dfW)
-plot_windX(dfW)
+plot_temp(dfT)
+#plot_windX(dfW)
 
 
 
