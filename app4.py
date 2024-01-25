@@ -26,6 +26,19 @@ def plot_wind(dfX: pd.DataFrame) -> None:
                 )))
     st.write(figX)
 
+def plot_windX(dfX: pd.DataFrame) -> None:
+    figX = px.line(dfX, y="V_WIND")
+    figX.update_traces(dict(
+        mode='lines+markers',
+        marker=dict(
+            color='red',
+            size=20,
+            symbol='triangle-down-open',
+            angle=df['DIR_WIND']
+        )
+    ))
+    st.write(figX)
+
 st.set_page_config(
     page_title="Real-Time VW POC Dashboard",
     page_icon="✅",
@@ -93,6 +106,7 @@ st.dataframe(dfW)
 
 
 plot_wind(dfW)
+plot_windX(dfW)
 
 
 
