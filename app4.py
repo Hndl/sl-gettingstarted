@@ -32,7 +32,7 @@ def plot_temp(dfX: pd.DataFrame) -> None:
 
 def plot_Voltage(dfX: pd.DataFrame) -> None:
     figX = px.line(dfX, y=["Voltage","Humidity","Ambient-Temperature"])
-    figX.add_vline(x=12.1, line_width=3, line_dash="dash", line_color="orange")
+    figX.add_hline(y=12.1, line_width=3, line_dash="dash", line_color="orange")
     st.write(figX)
 
 def plot_Humidity(dfX: pd.DataFrame) -> None:
