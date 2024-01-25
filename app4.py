@@ -25,6 +25,7 @@ def plot_wind(dfX: pd.DataFrame) -> None:
                     angle=[wind_row[1]['DIR_WIND']],
                 )))
     st.write(figX)
+    
 
 def plot_windX(dfX: pd.DataFrame) -> None:
     figX = px.line(dfX, y="V_WIND")
