@@ -5,6 +5,10 @@ from st_files_connection import FilesConnection
 from streamlit.components.v1 import html
 import time
 import plotly.express as px
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
 
 
 
@@ -58,6 +62,7 @@ st.dataframe(df)
 #for row in df.itertuples():
 #    st.write(f"{row.Owner} has a :{row.Pet}: :: {row.Voltage}")
 
+st.markdown("### Test Windspeed and Direction")
 
 
 
