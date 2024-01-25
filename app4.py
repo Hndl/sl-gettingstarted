@@ -31,7 +31,7 @@ def plot_temp(dfX: pd.DataFrame) -> None:
     st.write(figX)  
 
 def plot_Voltage(dfX: pd.DataFrame) -> None:
-    figX = px.line(dfX, y=["Voltage","Min-Voltage"])
+    figX = px.line(dfX, y=["Voltage","Min-Voltage","Humidity","Ambient-Temperature"])
     st.write(figX)
 
 def plot_windX(dfX: pd.DataFrame) -> None:
@@ -112,7 +112,10 @@ amb_points = np.random.randint(-10, high=44, size=len(idx))
 voltage = np.random.randint(9, high=14.5, size=len(idx))
 minVoltage = np.random.randint(11, high=12, size=len(idx))
 
-dfW = pd.DataFrame({'datetime': idx,'Voltage':voltage,'Min-Voltage':minVoltage, 'V_WIND': wind_speeds, 'DIR_WIND': wind_directions,'Ambient-Temperature': amb_points, 'Dew-Point-Temperature': dew_points})
+humidity = np.random.randint(0, high=100, size=len(idx))
+
+
+dfW = pd.DataFrame({'datetime': idx,'Humidity':humidity,'Voltage':voltage,'Min-Voltage':minVoltage, 'V_WIND': wind_speeds, 'DIR_WIND': wind_directions,'Ambient-Temperature': amb_points, 'Dew-Point-Temperature': dew_points})
 dfW['datetime'] = pd.to_datetime(dfW.datetime)
 dfW = dfW.set_index('datetime')
 st.dataframe(dfW)
@@ -129,6 +132,7 @@ st.dataframe(dfW)
 plot_wind(dfW)
 plot_temp(dfW)
 plot_Voltage(dfW)
+
 #plot_windX(dfW)
 
 
