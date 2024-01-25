@@ -10,7 +10,21 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
-
+def plot_wind(dfX: pd.DataFrame) -> None:
+    figX = px.line(dfX, y="V_WIND")
+    for wind_row in dfX.iterrows():
+        figX.add_trace(
+            go.Scatter(
+                x=[wind_row[0]],
+                y=[wind_row[1]['V_WIND']],
+                showlegend=False,
+                marker=dict(
+                    color='red',
+                    size=20,
+                    symbol='triangle-down-open',
+                    angle=[wind_row[1]['DIR_WIND']],
+                )))
+    st.write(figX)
 
 st.set_page_config(
     page_title="Real-Time VW POC Dashboard",
@@ -78,5 +92,8 @@ st.dataframe(dfW)
 
 
 
+plot_wind(dfW)
 
-html(my_html,unsafe_allow_html=True)
+
+
+html(my_html)
