@@ -27,7 +27,7 @@ def plot_wind(dfX: pd.DataFrame) -> None:
     st.write(figX)
  
 def plot_temp(dfX: pd.DataFrame) -> None:
-    figX = px.line(dfX, y=["Dew-Point-Temperature","Ambient-Temperature"],Markers=True)
+    figX = px.line(dfX, y=["Dew-Point-Temperature","Ambient-Temperature"])
     
     st.write(figX)   
 
