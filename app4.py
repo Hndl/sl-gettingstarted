@@ -17,7 +17,7 @@ def plot_wind(dfX: pd.DataFrame) -> None:
             go.Scatter(
                 x=[wind_row[0]],
                 y=[wind_row[1]['V_WIND']],
-                showlegend=False,
+                showlegend=True,
                 marker=dict(
                     color='red',
                     size=20,
