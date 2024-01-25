@@ -101,15 +101,17 @@ np.random.seed(seed=13)
 idx = pd.date_range("2023-07-11 10:05", "2023-07-13 23:00", freq='60min')
 wind_speeds = np.random.random_sample(size=len(idx)) * 15
 wind_directions = np.random.randint(0, high=3600, size=len(idx)) / 10.0
-dew_points = np.random.randint(-8, high=5, size=len(idx))
-amb_points = np.random.randint(-10, high=44, size=len(idx))
+
+idx2 = pd2.date_range("2023-07-11 10:05", "2023-07-13 23:00", freq='60min')
+dew_points = np.random.randint(-8, high=5, size=len(idx2))
+amb_points = np.random.randint(-10, high=44, size=len(idx2))
 
 dfW = pd.DataFrame({'datetime': idx, 'V_WIND': wind_speeds, 'DIR_WIND': wind_directions})
 dfW['datetime'] = pd.to_datetime(dfW.datetime)
 dfW = dfW.set_index('datetime')
 st.dataframe(dfW)
 
-dfT = pd.DataFrame({'datetime': idx, 'Ambient-Temperature': amb_points, 'Dew-Point-Temperature': dew_points})
+dfT = pd2.DataFrame({'datetime': idx2, 'Ambient-Temperature': amb_points, 'Dew-Point-Temperature': dew_points})
 dfT['datetime'] = pd.to_datetime(dfT.datetime)
 dfT = dfT.set_index('datetime')
 st.dataframe(dfT)
