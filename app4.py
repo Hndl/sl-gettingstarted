@@ -34,6 +34,10 @@ def plot_Voltage(dfX: pd.DataFrame) -> None:
     figX = px.line(dfX, y=["Voltage","Min-Voltage","Humidity","Ambient-Temperature"])
     st.write(figX)
 
+def plot_Humidity(dfX: pd.DataFrame) -> None:
+    figX = px.line(dfX, y=["Humidity","Ambient-Temperature"])
+    st.write(figX)
+
 def plot_windX(dfX: pd.DataFrame) -> None:
     figX = px.line(dfX, y="V_WIND")
     figX.update_traces(dict(
@@ -132,7 +136,7 @@ st.dataframe(dfW)
 plot_wind(dfW)
 plot_temp(dfW)
 plot_Voltage(dfW)
-
+plot_Humidity(dfW)
 #plot_windX(dfW)
 
 
