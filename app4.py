@@ -17,10 +17,10 @@ def plot_wind(dfX: pd.DataFrame) -> None:
             go.Scatter(
                 x=[wind_row[0]],
                 y=[wind_row[1]['V_WIND']],
-                showlegend=True,
+                showlegend=False,
                 marker=dict(
                     color='red',
-                    size=20,
+                    size=30,
                     symbol='arrow',
                     angle=[wind_row[1]['DIR_WIND']],
                 )))
