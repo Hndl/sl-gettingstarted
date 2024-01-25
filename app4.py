@@ -103,8 +103,8 @@ wind_speeds = np.random.random_sample(size=len(idx)) * 15
 wind_directions = np.random.randint(0, high=3600, size=len(idx)) / 10.0
 
 
-dew_points = np.random.randint(-8, high=5, size=len(idx2))
-amb_points = np.random.randint(-10, high=44, size=len(idx2))
+dew_points = np.random.randint(-8, high=5, size=len(idx))
+amb_points = np.random.randint(-10, high=44, size=len(idx))
 
 dfW = pd.DataFrame({'datetime': idx, 'V_WIND': wind_speeds, 'DIR_WIND': wind_directions,'Ambient-Temperature': amb_points, 'Dew-Point-Temperature': dew_points})
 dfW['datetime'] = pd.to_datetime(dfW.datetime)
