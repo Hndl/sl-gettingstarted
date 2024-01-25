@@ -93,7 +93,7 @@ st.markdown("### Test Windspeed and Direction")
 
 np.random.seed(seed=13)
 
-idx = pd.date_range("2023-07-11 10:05", "2023-07-11 11:00", freq='5min')
+idx = pd.date_range("2023-07-11 10:05", "2023-07-11 23:00", freq='60min')
 wind_speeds = np.random.random_sample(size=len(idx)) * 15
 wind_directions = np.random.randint(0, high=3600, size=len(idx)) / 10.0
 dfW = pd.DataFrame({'datetime': idx, 'V_WIND': wind_speeds, 'DIR_WIND': wind_directions})
