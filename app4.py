@@ -34,7 +34,7 @@ def plot_windX(dfX: pd.DataFrame) -> None:
             color='red',
             size=20,
             symbol='triangle-down-open',
-            angle=df['DIR_WIND']
+            angle=dfX['DIR_WIND']
         )
     ))
     st.write(figX)
