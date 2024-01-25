@@ -110,7 +110,7 @@ dew_points = np.random.randint(-8, high=5, size=len(idx))
 amb_points = np.random.randint(-10, high=44, size=len(idx))
 
 voltage = np.random.randint(9, high=14.5, size=len(idx))
-minVoltage = np.random.randint(12, high=12, size=len(idx))
+minVoltage = np.random.randint(11.9, high=12, size=len(idx))
 
 dfW = pd.DataFrame({'datetime': idx,'Voltage':voltage,'Min-Voltage':minVoltage, 'V_WIND': wind_speeds, 'DIR_WIND': wind_directions,'Ambient-Temperature': amb_points, 'Dew-Point-Temperature': dew_points})
 dfW['datetime'] = pd.to_datetime(dfW.datetime)
