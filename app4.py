@@ -21,7 +21,7 @@ def plot_wind(dfX: pd.DataFrame) -> None:
                 marker=dict(
                     color='red',
                     size=20,
-                    symbol='arrow-bar-down',
+                    symbol='arrow',
                     angle=[wind_row[1]['DIR_WIND']],
                 )))
     st.write(figX)
